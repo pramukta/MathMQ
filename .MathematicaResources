@@ -1,0 +1,11 @@
+Resources[
+    Version[1],
+    Java[
+        Directory["javaOutput"],
+        Directory["MathMQ/Java"]
+    ],
+    ExecutionBuildCommand["<<MathMQ`"],
+    Paclet[
+        FunctionPaclet[False]
+    ]
+]
