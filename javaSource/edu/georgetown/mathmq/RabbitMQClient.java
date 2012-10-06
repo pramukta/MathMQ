@@ -1,13 +1,7 @@
 package edu.georgetown.mathmq;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.URISyntaxException;
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
 import com.rabbitmq.client.*;
-
 
 public class RabbitMQClient {
 	Connection connection;
@@ -88,7 +82,7 @@ public class RabbitMQClient {
 				if (response == null) {
 					return("");
 				} else {
-				    AMQP.BasicProperties props = response.getProps();
+				    // AMQP.BasicProperties props = response.getProps();
 				    return(new String( response.getBody() ));
 				}
 			} catch (IOException e) {
@@ -99,8 +93,6 @@ public class RabbitMQClient {
 		}
 		return("");
 	}
-	
-	
 }
 
 
